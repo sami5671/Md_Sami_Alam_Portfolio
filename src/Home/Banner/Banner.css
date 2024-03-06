@@ -1,19 +1,14 @@
 body {
-  /* background: black;
-      color: aliceblue; */
+  background: rgb(222, 220, 230);
 }
 
 .lol {
-  width: 400px;
-  height: 400px;
-  /* border: 1px solid rgb(102, 247, 131); */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  border-radius: 50%;
 }
 
 .profile {
@@ -63,7 +58,7 @@ body {
   right: 0;
   margin: auto;
   -webkit-animation: express 5s linear infinite;
-  animation: express 90s linear infinite;
+  animation: express 10s linear infinite;
 }
 
 .react {
