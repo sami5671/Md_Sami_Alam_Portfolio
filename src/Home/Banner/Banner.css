@@ -1,0 +1,140 @@
+body {
+  /* background: black;
+      color: aliceblue; */
+}
+
+.lol {
+  width: 400px;
+  height: 400px;
+  /* border: 1px solid rgb(102, 247, 131); */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.js {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: js 5s linear infinite;
+  animation: js 40s linear infinite;
+}
+
+.mongodb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: mongodb 5s linear infinite;
+  animation: mongodb 30s linear infinite;
+}
+
+.express {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: express 5s linear infinite;
+  animation: express 90s linear infinite;
+}
+
+.react {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: react 5s linear infinite;
+  animation: react 25s linear infinite;
+}
+
+.nodejs {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: nodejs 5s linear infinite;
+  animation: nodejs 45s linear infinite;
+}
+
+@keyframes js {
+  0% {
+    transform: rotate(0deg) translate(-230px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-230px) rotate(-360deg);
+  }
+}
+
+@keyframes mongodb {
+  0% {
+    transform: rotate(0deg) translate(-150px, -150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px, -150px) rotate(-360deg);
+  }
+}
+
+@keyframes express {
+  0% {
+    transform: rotate(0deg) translate(100px, -100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(100px, -100px) rotate(-360deg);
+  }
+}
+
+@keyframes react {
+  0% {
+    transform: rotate(0deg) translate(200px, 200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(200px, 200px) rotate(-360deg);
+  }
+}
+
+@keyframes nodejs {
+  0% {
+    transform: rotate(0deg) translate(-150px, 150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px, 150px) rotate(-360deg);
+  }
+}
