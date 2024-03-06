@@ -4,9 +4,12 @@ import mongodb from "../../assets/images/mongodb.png";
 import express from "../../assets/images/express.png";
 import react from "../../assets/images/react.png";
 import nodejs from "../../assets/images/node.jpg";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 import profile from "../../assets/images/profile2.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaNode } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -103,16 +106,19 @@ const Banner = () => {
               <img src={js} width="50px" height="50px" alt="" />
             </div>
             <div className="mongodb">
-              <img src={mongodb} width="50px" height="50px" alt="" />
+              <SiMongodb className="h-[40px] w-[40px] text-green-500" />
             </div>
             <div className="express">
-              <img src={express} width="50px" height="50px" alt="" />
+              <SiExpress className="h-[40px] w-[40px] text-black" />
             </div>
             <div className="react">
-              <img src={react} width="50px" height="50px" alt="" />
+              <img src={react} alt="" />
             </div>
             <div className="nodejs">
-              <img src={nodejs} width="50px" height="50px" alt="" />
+              <FaNode className="h-[60px] w-[60px] text-green-700" />
+            </div>
+            <div className="firebase">
+              <SiFirebase className="h-[40px] w-[40px] text-amber-500" />
             </div>
             <div className="profile">
               <img src={profile} width="250px" height="250px" alt="" />

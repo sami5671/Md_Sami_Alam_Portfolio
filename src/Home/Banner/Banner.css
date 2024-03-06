@@ -62,8 +62,8 @@ body {
 }
 
 .react {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 40px;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -87,6 +87,19 @@ body {
   margin: auto;
   -webkit-animation: nodejs 5s linear infinite;
   animation: nodejs 45s linear infinite;
+}
+.firebase {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: firebase 5s linear infinite;
+  animation: firebase 15s linear infinite;
 }
 
 @keyframes js {
@@ -121,11 +134,20 @@ body {
     transform: rotate(0deg) translate(200px, 200px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(200px, 200px) rotate(-360deg);
+    transform: rotate(360deg) translate(150px, 150px) rotate(-360deg);
   }
 }
 
 @keyframes nodejs {
+  0% {
+    transform: rotate(0deg) translate(-150px, 150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px, 150px) rotate(-360deg);
+  }
+}
+
+@keyframes firebase {
   0% {
     transform: rotate(0deg) translate(-150px, 150px) rotate(0deg);
   }

@@ -1,10 +1,11 @@
 import Banner from "./Home/Banner/Banner";
+import Navbar from "./Home/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <h1 className="bg-black">Navbar</h1>
       <div>
+        <Navbar></Navbar>
         <Banner></Banner>
       </div>
     </>
