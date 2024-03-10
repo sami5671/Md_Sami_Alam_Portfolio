@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdCloseCircle } from "react-icons/io";
 import logo from "../../assets/images/logo.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
