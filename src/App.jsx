@@ -3,6 +3,7 @@ import Banner from "./Home/Banner/Banner";
 import Navbar from "./Home/Navbar/Navbar";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import loadingImg from "./assets/images/loadingf.gif";
+import Project from "./Home/Project/Project";
 function App() {
   // ----------------------------------------------------------------
 
@@ -11,7 +12,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, []);
 
   const [text] = useTypewriter({
@@ -40,9 +41,10 @@ function App() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="max-w-screen-2xl m-auto">
           <Navbar></Navbar>
           <Banner></Banner>
+          <Project></Project>
         </div>
       )}
     </>
