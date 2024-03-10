@@ -1,9 +1,6 @@
 import "./Banner.css";
 import js from "../../assets/images/js.png";
-import mongodb from "../../assets/images/mongodb.png";
-import express from "../../assets/images/express.png";
 import react from "../../assets/images/react.png";
-import nodejs from "../../assets/images/node.jpg";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
@@ -79,7 +76,7 @@ const Banner = () => {
 
           {/* social links */}
           {/* button resume and contact Me */}
-          <div className="flex gap-6 mt-6 mb-44">
+          <div className="flex gap-6 mt-6 mb-24 lg:mb-44">
             <div>
               <button className=" bg-pink-500 text-white px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-300 hover:text-black font-semibold">
                 <span className="flex gap-1 items-center text-[16px]">
