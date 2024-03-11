@@ -1,23 +1,29 @@
 const BlogCard = ({ item }) => {
   // destructuring
-  const { img, blogName, description } = item;
-  // console.log(blog);
+  const { img, blogName, description, link } = item;
+  // console.log(item);
 
   return (
     <div>
-      <div className="shadow-xl">
-        <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            className="hover:opacity-70 hover:bg-gradient-to-r from-pink-600 via-black to-green-900"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{blogName}</h2>
+      <div className="lg:w-[90%] h-full rounded-lg shadow-2xl">
+        <a href={link}>
+          <figure>
+            <img
+              src={img}
+              className="w-full h-[130px] md:h-[215px] lg:h-[215px] hover:opacity-70 cursor-pointer rounded-t-lg"
+              alt="Shoes"
+            />
+          </figure>
+        </a>
+        <div className="card-body w-[95%] h-[240px]">
+          <h2 className="text-2xl font-bold bg-gradient-to-br from-pink-500 to-lime-400 text-transparent bg-clip-text ">
+            {blogName}
+          </h2>
           <p>{description}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <div className="py-2">
+            <button className="px-5 py-1 rounded-br-lg rounded-tl-lg bg-pink-500 hover:bg-gradient-to-tr from-pink-300 to-lime-400 text-white font-bold ">
+              See More
+            </button>
           </div>
         </div>
       </div>
