@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdCloseCircle } from "react-icons/io";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,11 @@ const Navbar = () => {
             <li>
               <a href="#">Home</a>
             </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
+            <Link spy={true} smooth={true} to="project">
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </Link>
             <li>
               <a href="#">Services</a>
             </li>

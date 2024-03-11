@@ -9,10 +9,13 @@ import { SiVercel } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { SiReactquery } from "react-icons/si";
 import { SiAxios } from "react-icons/si";
+import { FaCcStripe } from "react-icons/fa6";
+import { Carousel } from "react-responsive-carousel";
 
 const ProjectCard = ({
   image,
   title,
+  subTitle,
   category,
   description,
   liveLink,
@@ -23,7 +26,10 @@ const ProjectCard = ({
     <>
       <div className="w-full py-2 flex flex-col-reverse lg:flex-row justify-center">
         <div className="w-full px-2">
-          <h3 className="text-2xl text-pink-900">{title}</h3>
+          <h3 className="text-2xl text-pink-500">{title}</h3>
+          <h2 className="text-xl mb-2 text-pink-900 font-semibold">
+            {subTitle}
+          </h2>
           <p className="text-base text-slate-600 -mt-1">{category}</p>
           <p>{description}</p>
           <div className="mt-4 flex flex-col">
@@ -56,6 +62,9 @@ const ProjectCard = ({
                 </span>
                 <span className="text-purple-600 text-3xl hidden lg:block">
                   <SiAxios />
+                </span>
+                <span className="text-blue-700 text-3xl hidden lg:block">
+                  <FaCcStripe />
                 </span>
               </div>
             </div>
@@ -106,13 +115,15 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group ">
-          <img
-            className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
-            src={image}
-            alt="ImageOne"
-          />
-          <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-pink-600 via-green-600 to-green-200 opacity-20"></div>
+        <div className="w-full h-full mb-3 lg:mb-24 overflow-hidden relative cursor-pointer group">
+          <div className="">
+            <img
+              className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
+              src={image}
+              alt="ImageOne"
+            />
+            <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-pink-600 via-green-600 to-green-200 opacity-20"></div>
+          </div>
         </div>
       </div>
     </>

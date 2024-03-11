@@ -4,6 +4,7 @@ import Navbar from "./Home/Navbar/Navbar";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import loadingImg from "./assets/images/loadingf.gif";
 import Project from "./Home/Project/Project";
+import Blog from "./Home/Blog/Blog";
 function App() {
   // ----------------------------------------------------------------
 
@@ -12,7 +13,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 1000);
   }, []);
 
   const [text] = useTypewriter({
@@ -45,6 +46,7 @@ function App() {
           <Navbar></Navbar>
           <Banner></Banner>
           <Project></Project>
+          <Blog></Blog>
         </div>
       )}
     </>
