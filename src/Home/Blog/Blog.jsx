@@ -3,10 +3,10 @@ import BlogCard from "./BlogCard";
 const Blog = () => {
   // ----------------------------------------------------------------
 
-  const [blog, setBlog] = useState(0);
+  const [blog, setBlog] = useState([]);
 
   useEffect(() => {
-    fetch("../../../public/Blog.json")
+    fetch("/public/blog.json")
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);
@@ -24,7 +24,7 @@ const Blog = () => {
       <section className="lg:px-24 py-1">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {blog.map((item) => (
-            <BlogCard key={item.id} blog={blog}></BlogCard>
+            <BlogCard key={item.id} item={item}></BlogCard>
           ))}
         </div>
       </section>
