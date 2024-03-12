@@ -4,7 +4,7 @@ const BlogCard = ({ item }) => {
   // console.log(item);
 
   return (
-    <div>
+    <div data-aos="zoom-in-up" data-aos-duration="3000">
       <div className="lg:w-[90%] h-full rounded-lg shadow-2xl">
         <a href={link}>
           <figure>

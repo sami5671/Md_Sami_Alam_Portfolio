@@ -21,11 +21,11 @@ const Project = () => {
           Recent Projects
         </h1>
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div>
+          <div data-aos="fade-up" data-aos-duration="3000">
             <img src={robotImg} className="w-[300px] lg:w-[500px]" alt="" />
           </div>
 
-          <div className="w-full">
+          <div className="w-full" data-aos="fade-up" data-aos-duration="3000">
             <Scrollbars
               autoHide
               autoHideTimeout={1000}

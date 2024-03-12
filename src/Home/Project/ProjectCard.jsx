@@ -24,7 +24,11 @@ const ProjectCard = ({
 }) => {
   return (
     <>
-      <div className="w-full py-2 flex flex-col-reverse lg:flex-row justify-center">
+      <div
+        className="w-full py-2 flex flex-col-reverse lg:flex-row justify-center"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="w-full px-2">
           <h3 className="text-2xl text-pink-500">{title}</h3>
           <h2 className="text-xl mb-2 text-pink-900 font-semibold">
