@@ -1,18 +1,41 @@
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
-const Blog = () => {
-  // ----------------------------------------------------------------
 
+const jsonData = [
+  {
+    id: 1,
+    img: "https://i.ibb.co/QvWPV7Q/blog1.jpg",
+    blogName: "JavaScript Fundamentals",
+    description: "Description for Blog 1",
+    link: "https://www.linkedin.com/in/sami5671/",
+  },
+  {
+    id: 2,
+    img: "https://i.ibb.co/Brgm9xZ/blog2.jpg",
+    blogName: "React Fundamentals",
+    description: "Description for Blog 2",
+  },
+  {
+    id: 3,
+    img: "https://i.ibb.co/hVsx6tQ/blog3.jpg",
+    blogName: "Crud Operations in MongoDB",
+    description: "Description for Blog 3",
+  },
+  {
+    id: 4,
+    img: "https://i.ibb.co/MMQLtPb/blog4.png",
+    blogName: "Default Blog Name",
+    description: "Description for Blog 4",
+  },
+];
+
+const Blog = () => {
   const [blog, setBlog] = useState([]);
 
   useEffect(() => {
-    fetch("/public/blog.json")
-      .then((res) => res.json())
-      .then((data) => setBlog(data));
+    setBlog(jsonData);
   }, []);
 
-  // console.log(blog);
-  // ----------------------------------------------------------------
   return (
     <>
       <section className="px-12" id="blog">
