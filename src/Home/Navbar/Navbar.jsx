@@ -31,9 +31,11 @@ const Navbar = () => {
             <li>
               <a href="#">Services</a>
             </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
+            <Link spy={true} smooth={true} to="blog">
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </Link>
             <li>
               <a href="#">Contact</a>
             </li>

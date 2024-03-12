@@ -10,8 +10,8 @@ import { FaGithub, FaNode } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import { FaFileDownload } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
+import ResumeButton from "../../Components/ResumeButton/ResumeButton";
 
 const Banner = () => {
   // ----------------------------------------------------------------
@@ -78,11 +78,7 @@ const Banner = () => {
           {/* button resume and contact Me */}
           <div className="flex gap-6 mt-6 mb-24 lg:mb-44">
             <div>
-              <button className=" bg-pink-500 text-white px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-300 hover:text-black font-semibold">
-                <span className="flex gap-1 items-center text-[16px]">
-                  Download Resume <FaFileDownload />
-                </span>
-              </button>
+              <ResumeButton></ResumeButton>
             </div>
 
             <div>

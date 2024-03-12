@@ -11,11 +11,11 @@ const Blog = () => {
       .then((data) => setBlog(data));
   }, []);
 
-  console.log(blog);
+  // console.log(blog);
   // ----------------------------------------------------------------
   return (
     <>
-      <section className="px-12">
+      <section className="px-12" id="blog">
         <div className="mt-24 lg:mt-32">
           <h1 className="text-2xl px-2 lg:text-4xl mb-12 font-mono font-bold border-b-2  bg-gradient-to-tr from-pink-500 to-lime-700 text-transparent bg-clip-text">
             My Blog
