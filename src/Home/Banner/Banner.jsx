@@ -1,4 +1,5 @@
 import "./Banner.css";
+import emailjs from "@emailjs/browser";
 import js from "../../assets/images/js.png";
 import react from "../../assets/images/react.png";
 import { SiExpress } from "react-icons/si";
@@ -12,6 +13,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import ResumeButton from "../../Components/ResumeButton/ResumeButton";
+import Swal from "sweetalert2";
+import { useRef } from "react";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const Banner = () => {
   // ----------------------------------------------------------------
@@ -22,9 +27,34 @@ const Banner = () => {
     deleteSpeed: 20,
     delaySpeed: 2000,
   });
+  // ----------------------------Email js------------------------------------
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_krbu6f9",
+        "template_bjttpzi",
+        form.current,
+        "cBaUoRkJgclAkWIap"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Successfully Send the Email. OK!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   // ----------------------------------------------------------------
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       {/* for small devices  */}
       <div className="block lg:hidden flex justify-center mt-4">
         <img src={profile} className="rounded-full w-[200px]" alt="" />
@@ -82,7 +112,12 @@ const Banner = () => {
             </div>
 
             <div>
-              <button className=" bg-pink-200 px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-400 hover:text-white font-semibold">
+              <button
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+                className="bg-pink-200 px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-400 hover:text-white font-semibold"
+              >
                 <span className="flex gap-1 items-center text-[16px]">
                   Contact Me <MdOutlineMarkEmailRead />
                 </span>
@@ -119,6 +154,67 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      {/*for modal  */}
+
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+
+      {/* You can open the modal using document.getElementById('ID').showModal() method */}
+
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box bg-pink-50">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+
+          <section className="py-2">
+            <div className="flex lg:justify-center mb-6">
+              <h1 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-tr from-pink-700 to-lime-500 text-transparent bg-clip-text">
+                Contact With Me
+              </h1>
+            </div>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-2 lg:w-1/2"
+            >
+              <div className="lg:flex gap-6">
+                <input
+                  className="mb-2 py-2 px-4 border-2 border-pink-300 rounded-2xl"
+                  type="text"
+                  placeholder="Your name"
+                  name="user_name"
+                  id=""
+                />
+                <input
+                  className="py-2 px-4 border-2 border-pink-300 rounded-2xl"
+                  type="email"
+                  placeholder="@samialam5671.com"
+                  name="user_email"
+                  id=""
+                />
+              </div>
+              <textarea
+                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-pink-300 rounded-2xl"
+                placeholder="Write something here............."
+                name="message"
+                id=""
+                cols="20"
+                rows="10"
+              ></textarea>
+              <button
+                className="border-2 hover:bg-gradient-to-tr from-pink-300 to-red-400 bg-pink-500 text-xl text-white font-semibold py-1"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+        </div>
+      </dialog>
     </>
   );
 };
