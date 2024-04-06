@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 
 const jsonData = [
@@ -30,11 +29,11 @@ const jsonData = [
 ];
 
 const Blog = () => {
-  const [blog, setBlog] = useState([]);
+  // const [blog, setBlog] = useState([]);
 
-  useEffect(() => {
-    setBlog(jsonData);
-  }, []);
+  // useEffect(() => {
+  //   setBlog(jsonData);
+  // }, []);
 
   return (
     <>
@@ -48,7 +47,7 @@ const Blog = () => {
 
       <section className="px-8 lg:px-24 py-1">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blog.map((item) => (
+          {jsonData.map((item) => (
             <BlogCard key={item.id} item={item}></BlogCard>
           ))}
         </div>

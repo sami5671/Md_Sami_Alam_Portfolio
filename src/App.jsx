@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Banner from "./Home/Banner/Banner";
 import Navbar from "./Home/Navbar/Navbar";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import loadingImg from "./assets/images/loadingf.gif";
 import Project from "./Home/Project/Project";
 import Blog from "./Home/Blog/Blog";
+import PuffLoader from "react-spinners/PuffLoader";
 function App() {
   // ----------------------------------------------------------------
 
@@ -13,30 +13,28 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
-  const [text] = useTypewriter({
-    words: ["Loading"],
-    loop: true,
-    typeSpeed: 100,
-    deleteSpeed: 20,
-    delaySpeed: 2000,
-  });
+  // const [text] = useTypewriter({
+  //   words: ["Let's Work & Grow together"],
+  //   loop: true,
+  //   typeSpeed: 100,
+  //   deleteSpeed: 20,
+  //   delaySpeed: 3000,
+  // });
 
   // ----------------------------------------------------------------
   return (
     <>
       {loading ? (
-        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-white">
+        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-black">
           <div className="flex flex-col items-center">
+            <PuffLoader color="rgba(0, 200, 0)" />
             <div>
-              <img src={loadingImg} alt="" className="w-[300px] h-[250px]" />
-            </div>
-            <div>
-              <p className="text-3xl text-blue-300">
-                {text}
-                <Cursor cursorBlinking="false" cursorStyle=".." />
+              <p className="text-3xl text-green-400 animate-pulse">
+                Let's Work & Grow together
+                <Cursor cursorBlinking="false" cursorStyle="...." />
               </p>
             </div>
           </div>

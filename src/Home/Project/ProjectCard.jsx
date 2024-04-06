@@ -34,16 +34,18 @@ const ProjectCard = ({
           <h2 className="text-xl mb-2 text-pink-900 font-semibold">
             {subTitle}
           </h2>
-          <p className="text-base text-slate-600 -mt-1">{category}</p>
+          <p className="text-base text-slate-300 -mt-1">{category}</p>
           <p>{description}</p>
           <div className="mt-4 flex flex-col">
             <div className="mb-4">
-              <h1 className="font-bold text-2xl mb-2">Technology: </h1>
+              <h1 className="font-bold text-2xl mb-2 text-slate-200">
+                Technology:{" "}
+              </h1>
               <div className="flex flex-wrap gap-2 text-white font-bold">
                 <span className="text-blue-500 text-3xl">
                   <FaReact />
                 </span>
-                <span className="text-black text-3xl">
+                <span className="text-white text-3xl">
                   <SiExpress />
                 </span>
                 <span className="text-green-500 text-3xl">
@@ -55,7 +57,7 @@ const ProjectCard = ({
                 <span className="text-blue-400 text-3xl">
                   <SiTailwindcss />
                 </span>
-                <span className="text-black text-3xl hidden lg:block">
+                <span className="text-white text-3xl hidden lg:block">
                   <SiVercel />
                 </span>
                 <span className="text-amber-500 text-3xl hidden lg:block">
@@ -67,7 +69,7 @@ const ProjectCard = ({
                 <span className="text-purple-600 text-3xl hidden lg:block">
                   <SiAxios />
                 </span>
-                <span className="text-blue-700 text-3xl hidden lg:block">
+                <span className="text-cyan-400 text-3xl hidden lg:block">
                   <FaCcStripe />
                 </span>
               </div>

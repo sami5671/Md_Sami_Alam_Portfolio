@@ -6,7 +6,7 @@ import robotImg from "../../assets/images/working2.gif";
 
 const Project = () => {
   const thumbStyle = {
-    backgroundColor: "pink", // Specify your desired color here
+    backgroundColor: "rgb(46, 125, 50)", // Specify your desired color here
     borderRadius: "3px",
   };
 
@@ -17,7 +17,7 @@ const Project = () => {
   return (
     <div className="" id="project">
       <section className="lg:mt-10 mb-12 lg:px-12">
-        <h1 className="text-2xl px-2 lg:text-4xl mb-12 font-mono font-bold border-b-2  bg-gradient-to-tr from-pink-500 to-lime-700 text-transparent bg-clip-text ">
+        <h1 className="text-2xl px-2 lg:text-4xl mb-12 font-mono font-bold border-b-2 border-green-900  bg-gradient-to-tr from-green-500 to-lime-200 text-transparent bg-clip-text">
           Recent Projects
         </h1>
         <div className="flex flex-col lg:flex-row items-center gap-12">

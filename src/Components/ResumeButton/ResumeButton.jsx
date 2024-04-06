@@ -41,10 +41,10 @@ const ResumeButton = () => {
       <div>
         <button
           onClick={handleDownload}
-          className=" bg-pink-500 text-white px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-300 hover:text-black font-semibold"
+          className=" bg-green-700 text-white px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-green-300 hover:text-black font-semibold"
         >
           <span className="flex gap-1 items-center text-[16px]">
-            Download Resume <FaFileDownload />
+            Download Resume <FaFileDownload className="animate-bounce" />
           </span>
         </button>
       </div>

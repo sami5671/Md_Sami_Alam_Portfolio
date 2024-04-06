@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div className="navbar font-semibold lg:border-b-2">
+        <div className="navbar font-semibold lg:fixed">
           <div className="logo mr-18">
-            <img src={logo} className="w-[40px] h-[40px]" alt="" />
+            {/* <img src={logo} className="w-[40px] h-[40px]" alt="" /> */}
           </div>
           <ul className="links">
             <li>
@@ -50,15 +50,19 @@ const Navbar = () => {
             <li>
               <a href="#">Home</a>
             </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
+            <Link spy={true} smooth={true} to="project">
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </Link>
             <li>
               <a href="#">Services</a>
             </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
+            <Link spy={true} smooth={true} to="blog">
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </Link>
             <li>
               <a href="#">Contact</a>
             </li>

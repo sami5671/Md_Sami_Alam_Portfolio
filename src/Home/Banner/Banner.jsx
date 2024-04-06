@@ -1,10 +1,10 @@
 import "./Banner.css";
 import emailjs from "@emailjs/browser";
 import js from "../../assets/images/js.png";
-import react from "../../assets/images/react.png";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
+import { RiReactjsFill } from "react-icons/ri";
 import profile from "../../assets/images/profile2.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaGithub, FaNode } from "react-icons/fa6";
@@ -13,7 +13,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import ResumeButton from "../../Components/ResumeButton/ResumeButton";
-import Swal from "sweetalert2";
 import { useRef } from "react";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
@@ -64,10 +63,10 @@ const Banner = () => {
       <div className="flex justify-center lg:justify-start">
         {/* left */}
         <div className="mt-12 lg:mt-44 lg:ml-24">
-          <h1 className="text-2xl lg:text-5xl lg:leading-snug text-slate-700 font-semibold font-serif">
+          <h1 className="text-2xl lg:text-5xl lg:leading-snug text-green-500 font-semibold font-serif">
             Hi, There.... <br />I Am Md Sami Alam
           </h1>
-          <p className="mt-4 text-[18px] lg:text-3xl text-pink-500">
+          <p className="mt-4 text-[18px] lg:text-3xl text-slate-300">
             {text}
             <Cursor cursorBlinking="false" cursorStyle="|" />
           </p>
@@ -78,25 +77,25 @@ const Banner = () => {
               <div className="flex space-x-2">
                 <a
                   href="https://github.com/sami5671"
-                  className="text-slate-800 hover:text-pink-300 rounded-full glow p-2"
+                  className="text-green-500 hover:text-green-300 rounded-full glow p-2"
                 >
                   <FaGithub className="text-[28px]" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/sami5671/"
-                  className="text-slate-800 hover:text-pink-300 rounded-full glow p-2"
+                  className="text-green-500 hover:text-green-300 rounded-full glow p-2"
                 >
                   <FaLinkedin className="text-[28px]" />
                 </a>
                 <a
                   href="https://www.instagram.com/samialam5671/"
-                  className="text-slate-800 hover:text-pink-300 rounded-full glow p-2"
+                  className="text-green-500 hover:text-green-300 rounded-full glow p-2"
                 >
                   <FaInstagramSquare className="text-[28px]" />
                 </a>
                 <a
                   href="https://www.facebook.com/samialam5559"
-                  className="text-slate-800 hover:text-pink-300 rounded-full glow p-2"
+                  className="text-green-500 hover:text-green-300 rounded-full glow p-2"
                 >
                   <FaFacebook className="text-[28px]" />
                 </a>
@@ -116,7 +115,7 @@ const Banner = () => {
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
-                className="bg-pink-200 px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-pink-400 hover:text-white font-semibold"
+                className="bg-green-950 px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-green-600 text-white font-semibold"
               >
                 <span className="flex gap-1 items-center text-[16px]">
                   Contact Me <MdOutlineMarkEmailRead />
@@ -137,13 +136,13 @@ const Banner = () => {
               <SiMongodb className="h-[40px] w-[40px] text-green-500" />
             </div>
             <div className="express">
-              <SiExpress className="h-[40px] w-[40px] text-black" />
+              <SiExpress className="h-[40px] w-[40px] text-white" />
             </div>
             <div className="react">
-              <img src={react} alt="" />
+              <RiReactjsFill className="h-[60px] w-[60px] text-cyan-300 animate-spin" />
             </div>
             <div className="nodejs">
-              <FaNode className="h-[60px] w-[60px] text-green-700" />
+              <FaNode className="h-[60px] w-[60px] text-green-400" />
             </div>
             <div className="firebase">
               <SiFirebase className="h-[40px] w-[40px] text-amber-500" />
