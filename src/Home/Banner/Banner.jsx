@@ -1,24 +1,70 @@
-import "./Banner.css";
-import emailjs from "@emailjs/browser";
-import js from "../../assets/images/js.png";
+// react icons
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
-import { RiReactjsFill } from "react-icons/ri";
-import profile from "../../assets/images/profile2.png";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaGithub, FaNode } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
+import js from "../../assets/images/js.png";
+import { FaLinkedin } from "react-icons/fa6";
+import { RiReactjsFill } from "react-icons/ri";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FaGithub, FaNode } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
-import ResumeButton from "../../Components/ResumeButton/ResumeButton";
-import { useRef } from "react";
+
+// react hot toast & sweet alert
+import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
 
+// react component
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import profile from "../../assets/images/profile2.png";
+import ResumePDF from "../../assets/images/MD_SAMI_ALAM.pdf";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import ContactModal from "../../Components/ContactModal/ContactModal";
+import ResumeButton from "../../Components/ResumeButton/ResumeButton";
+
+// css
+import "./Banner.css";
+
 const Banner = () => {
-  // ----------------------------------------------------------------
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+  // ------------------------Resume Download----------------------------------------
+  const handleDownload = () => {
+    Swal.fire({
+      title: "Are you sure you want to Download?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const link = document.createElement("a");
+        link.href = ResumePDF;
+        link.download = "MD_SAMI_ALAM.pdf";
+        link.click();
+
+        Swal.fire({
+          title: "Downloaded",
+          text: "Your resume has been downloaded successfully",
+          icon: "success",
+        });
+      } else {
+        Swal.fire({
+          title: "Cancelled",
+          text: "Download cancelled",
+          color: "lime",
+          icon: "info",
+        });
+      }
+    });
+  };
+  //  ----------------------------------------------------------------
+  // ------------------------------React TypeWriter----------------------------------
   const [text] = useTypewriter({
     words: ["Web Developer", "MERN Stack Developer", "UI Designer"],
     loop: true,
@@ -26,12 +72,12 @@ const Banner = () => {
     deleteSpeed: 20,
     delaySpeed: 2000,
   });
-  // ----------------------------Email js------------------------------------
 
+  // ----------------------------Email js for sending Email------------------------------------
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true);
     emailjs
       .sendForm(
         "service_krbu6f9",
@@ -44,6 +90,7 @@ const Banner = () => {
           console.log(result.text);
           toast.success("Successfully Send the Email. OK!");
           form.current.reset();
+          setLoading(false);
         },
         (error) => {
           console.log(error.text);
@@ -104,12 +151,12 @@ const Banner = () => {
           </div>
 
           {/* social links */}
+
           {/* button resume and contact Me */}
           <div className="flex gap-6 mt-6 mb-24 lg:mb-44">
             <div>
-              <ResumeButton></ResumeButton>
+              <ResumeButton handleDownload={handleDownload} />
             </div>
-
             <div>
               <button
                 onClick={() =>
@@ -122,6 +169,8 @@ const Banner = () => {
                 </span>
               </button>
             </div>
+            {/*for modal  */}
+            <ContactModal form={form} sendEmail={sendEmail} loading={loading} />
           </div>
           {/* button resume and contact Me */}
         </div>
@@ -153,67 +202,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
-      {/*for modal  */}
-
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
-
-      <dialog id="my_modal_3" className="modal">
-        <div className="modal-box bg-pink-50">
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
-
-          <section className="py-2">
-            <div className="flex lg:justify-center mb-6">
-              <h1 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-tr from-pink-700 to-lime-500 text-transparent bg-clip-text">
-                Contact With Me
-              </h1>
-            </div>
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className="flex flex-col gap-2 lg:w-1/2"
-            >
-              <div className="lg:flex gap-6">
-                <input
-                  className="mb-2 py-2 px-4 border-2 border-pink-300 rounded-2xl"
-                  type="text"
-                  placeholder="Your name"
-                  name="user_name"
-                  id=""
-                />
-                <input
-                  className="py-2 px-4 border-2 border-pink-300 rounded-2xl"
-                  type="email"
-                  placeholder="@samialam5671.com"
-                  name="user_email"
-                  id=""
-                />
-              </div>
-              <textarea
-                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-pink-300 rounded-2xl"
-                placeholder="Write something here............."
-                name="message"
-                id=""
-                cols="20"
-                rows="10"
-              ></textarea>
-              <button
-                className="border-2 hover:bg-gradient-to-tr from-pink-300 to-red-400 bg-pink-500 text-xl text-white font-semibold py-1"
-                type="submit"
-              >
-                Submit
-              </button>
-            </form>
-          </section>
-        </div>
-      </dialog>
     </>
   );
 };

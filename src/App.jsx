@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import Banner from "./Home/Banner/Banner";
 import Navbar from "./Home/Navbar/Navbar";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Cursor } from "react-simple-typewriter";
 import Project from "./Home/Project/Project";
 import Blog from "./Home/Blog/Blog";
 import PuffLoader from "react-spinners/PuffLoader";
+import { Helmet } from "react-helmet-async";
+
 function App() {
   // ----------------------------------------------------------------
-
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   // const [text] = useTypewriter({
@@ -27,6 +28,9 @@ function App() {
   // ----------------------------------------------------------------
   return (
     <>
+      <Helmet>
+        <title>Md Sami Alam</title>
+      </Helmet>
       {loading ? (
         <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-black">
           <div className="flex flex-col items-center">

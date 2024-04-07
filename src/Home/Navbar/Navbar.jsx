@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdCloseCircle } from "react-icons/io";
-import logo from "../../assets/images/logo.png";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
