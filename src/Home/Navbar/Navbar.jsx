@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from "react-scroll";
+import Container from "../../Container";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header>
-        <div className="navbar font-semibold lg:fixed">
+      <Container>
+        <div className="navbar font-semibold lg:fixed shadow-xl shadow-blue-100">
           <div className="logo mr-18">
             {/* <img src={logo} className="w-[40px] h-[40px]" alt="" /> */}
           </div>
@@ -67,7 +68,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </header>
+      </Container>
     </>
   );
 };

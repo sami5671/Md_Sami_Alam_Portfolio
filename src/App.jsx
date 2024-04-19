@@ -32,11 +32,11 @@ function App() {
         <title>Md Sami Alam</title>
       </Helmet>
       {loading ? (
-        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-black">
+        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center">
           <div className="flex flex-col items-center">
             <PuffLoader color="rgba(0, 200, 0)" />
             <div>
-              <p className="text-3xl text-green-400 animate-pulse">
+              <p className="text-3xl text-green-800 animate-pulse">
                 Let's Work & Grow together
                 <Cursor cursorBlinking="false" cursorStyle="...." />
               </p>

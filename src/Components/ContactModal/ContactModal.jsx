@@ -14,7 +14,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
           </form>
           <section className="py-2">
             <div className="flex lg:justify-center mb-6">
-              <h1 className="text-2xl animate-pulse lg:text-3xl font-semibold bg-gradient-to-tr from-green-700 to-lime-500 text-transparent bg-clip-text">
+              <h1 className="text-2xl animate-pulse lg:text-3xl font-semibold bg-gradient-to-tr from-cyan-900 to-blue-300 text-transparent bg-clip-text">
                 Contact With Me
               </h1>
             </div>
@@ -25,7 +25,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
             >
               <div className="lg:flex gap-6">
                 <input
-                  className="py-2 px-4 border-2 border-green-500 rounded-md"
+                  className="py-2 px-4 border-2 border-cyan-600  rounded-md"
                   type="text"
                   placeholder="Your name"
                   name="user_name"
@@ -33,7 +33,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
                   required
                 />
                 <input
-                  className="py-2 px-4 border-2 border-green-500 rounded-md"
+                  className="py-2 px-4 border-2 border-cyan-600  rounded-md"
                   type="email"
                   placeholder="your@gmail.com"
                   name="user_email"
@@ -42,7 +42,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
                 />
               </div>
               <textarea
-                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-green-500 rounded-md"
+                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-cyan-600 rounded-md"
                 placeholder="Write something here............."
                 name="message"
                 id=""
@@ -51,7 +51,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
                 required
               ></textarea>
               <button
-                className="rounded-md hover:bg-gradient-to-tr from-green-300 to-lime-400 bg-green-500 text-xl text-white font-semibold py-1"
+                className="rounded-md hover:bg-gradient-to-tr from-green-300 to-blue-900 bg-cyan-700 text-xl text-white font-semibold py-1"
                 type="submit"
               >
                 {loading ? (
