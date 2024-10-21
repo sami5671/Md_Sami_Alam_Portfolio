@@ -5,6 +5,8 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HelmetProvider>
-    <App />
+    <div className="bg-slate-950">
+      <App />
+    </div>
   </HelmetProvider>
 );

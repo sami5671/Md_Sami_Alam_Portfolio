@@ -29,7 +29,6 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: js 5s linear infinite;
   animation: js 40s linear infinite;
 }
 
@@ -43,7 +42,6 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: mongodb 5s linear infinite;
   animation: mongodb 30s linear infinite;
 }
 
@@ -57,13 +55,12 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: express 5s linear infinite;
   animation: express 10s linear infinite;
 }
 
 .react {
-  width: 45px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -71,7 +68,6 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: react 5s linear infinite;
   animation: react 25s linear infinite;
 }
 
@@ -85,9 +81,9 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: nodejs 5s linear infinite;
   animation: nodejs 45s linear infinite;
 }
+
 .firebase {
   width: 30px;
   height: 30px;
@@ -98,16 +94,28 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: firebase 5s linear infinite;
   animation: firebase 15s linear infinite;
+}
+
+.nextJs {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: nextJs 25s linear infinite;
 }
 
 @keyframes js {
   0% {
-    transform: rotate(0deg) translate(-230px) rotate(0deg);
+    transform: rotate(0deg) translate(-230px, 0px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-230px) rotate(-360deg);
+    transform: rotate(360deg) translate(-230px, 0px) rotate(-360deg);
   }
 }
 
@@ -134,7 +142,7 @@ body {
     transform: rotate(0deg) translate(200px, 200px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(150px, 150px) rotate(-360deg);
+    transform: rotate(360deg) translate(200px, 200px) rotate(-360deg);
   }
 }
 
@@ -149,9 +157,18 @@ body {
 
 @keyframes firebase {
   0% {
-    transform: rotate(0deg) translate(-150px, 150px) rotate(0deg);
+    transform: rotate(0deg) translate(150px, -150px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-150px, 150px) rotate(-360deg);
+    transform: rotate(360deg) translate(150px, -150px) rotate(-360deg);
+  }
+}
+
+@keyframes nextJs {
+  0% {
+    transform: rotate(0deg) translate(100px, 200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(100px, 200px) rotate(-360deg);
   }
 }

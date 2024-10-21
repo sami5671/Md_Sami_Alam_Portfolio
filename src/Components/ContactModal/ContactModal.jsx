@@ -8,7 +8,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
         <div className="modal-box bg-white">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button className="btn btn-sm  bg-red-600 btn-circle btn-ghost absolute right-2 top-2">
               ✕
             </button>
           </form>

@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from "react-scroll";
-import Container from "../../Container";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,61 +13,59 @@ const Navbar = () => {
 
   return (
     <>
-      <Container>
-        <div className="navbar font-semibold lg:fixed shadow-xl shadow-blue-100">
-          <div className="logo mr-18">
-            {/* <img src={logo} className="w-[40px] h-[40px]" alt="" /> */}
-          </div>
-          <ul className="links">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <Link spy={true} smooth={true} to="project">
-              <li>
-                <a href="#">Projects</a>
-              </li>
-            </Link>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <Link spy={true} smooth={true} to="blog">
-              <li>
-                <a href="#">Blog</a>
-              </li>
-            </Link>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-          <div className="toggle_btn" onClick={toggleMenu}>
-            <span>{isOpen ? <IoMdCloseCircle /> : <AiOutlineMenu />}</span>
-          </div>
+      <div className="navbar font-semibold shadow-xl">
+        <div className="logo mr-18">
+          {/* <img src={logo} className="w-[40px] h-[40px]" alt="" /> */}
         </div>
+        <ul className="links">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <Link spy={true} smooth={true} to="project">
+            <li>
+              <a href="#">Projects</a>
+            </li>
+          </Link>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <Link spy={true} smooth={true} to="blog">
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </Link>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div className="toggle_btn" onClick={toggleMenu}>
+          <span>{isOpen ? <IoMdCloseCircle /> : <AiOutlineMenu />}</span>
+        </div>
+      </div>
 
-        <div className={`dropdown_menu ${isOpen ? "open" : ""}`}>
-          <ul>
+      <div className={`dropdown_menu ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <Link spy={true} smooth={true} to="project">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Projects</a>
             </li>
-            <Link spy={true} smooth={true} to="project">
-              <li>
-                <a href="#">Projects</a>
-              </li>
-            </Link>
+          </Link>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <Link spy={true} smooth={true} to="blog">
             <li>
-              <a href="#">Services</a>
+              <a href="#">Blog</a>
             </li>
-            <Link spy={true} smooth={true} to="blog">
-              <li>
-                <a href="#">Blog</a>
-              </li>
-            </Link>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </Container>
+          </Link>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

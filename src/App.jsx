@@ -6,6 +6,7 @@ import Project from "./Home/Project/Project";
 import Blog from "./Home/Blog/Blog";
 import PuffLoader from "react-spinners/PuffLoader";
 import { Helmet } from "react-helmet-async";
+import Footer from "./Home/Footer/Footer";
 
 function App() {
   // ----------------------------------------------------------------
@@ -32,7 +33,7 @@ function App() {
         <title>Md Sami Alam</title>
       </Helmet>
       {loading ? (
-        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center">
+        <div className="fixed bg-slate-950 top-0 left-0 h-screen w-screen flex justify-center items-center">
           <div className="flex flex-col items-center">
             <PuffLoader color="rgba(0, 200, 0)" />
             <div>
@@ -44,12 +45,16 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="max-w-screen-2xl m-auto">
-          <Navbar></Navbar>
-          <Banner></Banner>
-          <Project></Project>
-          <Blog></Blog>
-        </div>
+        <>
+          {" "}
+          <div className="max-w-screen-2xl m-auto">
+            <Navbar></Navbar>
+            <Banner></Banner>
+            <Project></Project>
+            {/* <Blog></Blog> */}
+          </div>
+          <Footer></Footer>
+        </>
       )}
     </>
   );

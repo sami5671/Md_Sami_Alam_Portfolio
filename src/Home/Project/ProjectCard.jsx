@@ -10,32 +10,23 @@ import { SiFirebase } from "react-icons/si";
 import { SiReactquery } from "react-icons/si";
 import { SiAxios } from "react-icons/si";
 import { FaCcStripe } from "react-icons/fa6";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 
-const ProjectCard = ({
-  image,
-  title,
-  subTitle,
-  category,
-  description,
-  liveLink,
-  clientLink,
-  serverLink,
-}) => {
+const ProjectCard = ({ item }) => {
   return (
     <>
       <div
         className="w-full py-2 flex flex-col-reverse lg:flex-row justify-center"
-        data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos=""
+        data-aos-duration="300"
       >
         <div className="w-full px-2">
-          <h3 className="text-2xl text-pink-500">{title}</h3>
+          <h3 className="text-2xl text-pink-500">{item?.title}</h3>
           <h2 className="text-xl mb-2 text-pink-900 font-semibold">
-            {subTitle}
+            {item?.subTitle}
           </h2>
-          <p className="text-base text-slate-300 -mt-1">{category}</p>
-          <p>{description}</p>
+          <p className="text-base text-slate-300 -mt-1">{item?.category}</p>
+          <p>{item?.description}</p>
           <div className="mt-4 flex flex-col">
             <div className="mb-4">
               <h1 className="font-bold text-2xl mb-2 text-slate-200">
@@ -92,7 +83,7 @@ const ProjectCard = ({
           {/*  */}
           <div className="text-white mt-4 flex gap-1 lg:gap-4 mb-2">
             <a
-              href={liveLink}
+              href={item?.liveLink}
               className="bg-slate-400 px-4 py-1 text-white font-bold hover:bg-white hover:text-black rounded-full"
             >
               <span className="flex gap-2 items-center">
@@ -101,7 +92,7 @@ const ProjectCard = ({
               </span>
             </a>
             <a
-              href={clientLink}
+              href={item?.clientLink}
               className="bg-green-700 px-4 py-1 text-white font-bold hover:bg-white hover:text-black rounded-full"
             >
               <span className="flex gap-2 items-center">
@@ -110,7 +101,7 @@ const ProjectCard = ({
               </span>
             </a>
             <a
-              href={serverLink}
+              href={item?.serverLink}
               className="bg-orange-400 px-4 py-1 text-white font-bold hover:bg-white hover:text-black rounded-full"
             >
               <span className="flex gap-2 items-center">
@@ -125,7 +116,7 @@ const ProjectCard = ({
           <div className="">
             <img
               className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
-              src={image}
+              src={item?.image}
               alt="ImageOne"
             />
             <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-pink-600 via-green-600 to-green-200 opacity-20"></div>

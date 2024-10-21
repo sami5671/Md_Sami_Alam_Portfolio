@@ -1,13 +1,61 @@
 import ProjectCard from "./ProjectCard";
-import project1 from "../../assets/images/projectt1.png";
-import project2 from "../../assets/images/project1.png";
 import { Scrollbars } from "react-custom-scrollbars-2";
 import robotImg from "../../assets/images/working2.gif";
 import Container from "../../Container";
 
+const data = [
+  {
+    id: 1,
+
+    title: "MERN Stack Website",
+    category: "E-Commerce Business (Plants)",
+    subTitle: "Plant World",
+    image:
+      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436480/i9qenruzvey9clygxpne.png",
+    liveLink: "https://planet-world-fc802.web.app/",
+    clientLink: "https://github.com/sami5671/Planet-World-Client",
+    serverLink: "https://github.com/sami5671/Plant-World-Server",
+  },
+  {
+    id: 2,
+    title: "MERN Stack Website",
+    subTitle: "Dream Car",
+    category: "Online SaaS business Platform",
+    image:
+      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436561/duww2aaorblj2y4wha5p.png",
+    liveLink: "https://dream-car-68b89.web.app/",
+    clientLink: "https://github.com/sami5671/Dream-Car-Client",
+    serverLink: "https://github.com/sami5671/Dream-Car-Server",
+  },
+  {
+    id: 3,
+    title: "MERN Stack Web Streaming",
+    subTitle: "Tube Nest",
+    category: "Social Media Platform",
+    image:
+      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436557/nkjbkntxiiujae1hrbbz.png",
+    liveLink: "https://tube-nest.web.app/",
+    clientLink:
+      "https://github.com/sami5671/Web-Engineering-Semester-Project-Client",
+    serverLink:
+      "https://github.com/sami5671/Web-Engineering-Semester-Project-Server",
+  },
+  {
+    id: 4,
+    title: "MERN Stack Website",
+    subTitle: "Gadget Harbor",
+    category: "E-commerce website",
+    image:
+      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436560/ymtzbohivwf09wtxd98b.png",
+    liveLink: "https://gadget-harbor.web.app/",
+    clientLink: "https://github.com/sami5671/Gadget-Harbor-Client",
+    serverLink: "https://github.com/sami5671/Gadget-Harbor-Server",
+  },
+];
+
 const Project = () => {
   const thumbStyle = {
-    backgroundColor: "rgb(46, 125, 50)", // Specify your desired color here
+    backgroundColor: "white", // Specify your desired color here
     borderRadius: "3px",
   };
 
@@ -18,8 +66,8 @@ const Project = () => {
   return (
     <Container>
       <div className="" id="project">
-        <section className="lg:mt-10 mb-12">
-          <h1 className="text-2xl px-2 lg:text-4xl mb-12 font-mono font-bold border-b-2 border-green-900  bg-gradient-to-tr from-green-500 to-lime-200 text-transparent bg-clip-text">
+        <section className="lg:mt-24 mb-12">
+          <h1 className="text-2xl px-2 lg:text-4xl mb-12 font-mono font-bold border-b-2 border-white  bg-gradient-to-tr from-cyan-300 to-lime-100 text-transparent bg-clip-text">
             Recent Projects
           </h1>
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -30,31 +78,16 @@ const Project = () => {
             <div className="w-full" data-aos="fade-up" data-aos-duration="3000">
               <Scrollbars
                 autoHide
-                autoHideTimeout={1000}
+                autoHideTimeout={4000}
                 autoHideDuration={400}
-                style={{ width: "95%", height: 400 }}
+                style={{ width: "95%", height: 900 }}
                 renderThumbVertical={renderThumbVertical}
                 thumbMinSize={30} // Set minimum thumb size
               >
                 <div className="px-6">
-                  <ProjectCard
-                    title="MERN Stack Website"
-                    category="E-Commerce Business (Plants)"
-                    subTitle="Plant World"
-                    image={project2}
-                    liveLink="https://planet-world-fc802.web.app/"
-                    clientLink="https://github.com/sami5671/Planet-World-Client"
-                    serverLink="https://github.com/sami5671/Plant-World-Server"
-                  />
-                  <ProjectCard
-                    title="MERN Stack Website"
-                    subTitle="Gadget Harbor"
-                    category="Online Tech gadget platform"
-                    image={project1}
-                    liveLink="https://gadget-harbor.web.app/"
-                    clientLink="https://github.com/sami5671/Gadget-Harbor-Client"
-                    serverLink="https://github.com/sami5671/Gadget-Harbor-Server"
-                  />
+                  {data?.map((item) => (
+                    <ProjectCard key={item?.id} item={item} />
+                  ))}
                 </div>
               </Scrollbars>
             </div>

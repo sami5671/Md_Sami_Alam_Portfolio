@@ -9,6 +9,7 @@ import { RiReactjsFill } from "react-icons/ri";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaGithub, FaNode } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { TbBrandNextjs } from "react-icons/tb";
 
 // react hot toast & sweet alert
 import Swal from "sweetalert2";
@@ -26,7 +27,6 @@ import ResumeButton from "../../Components/ResumeButton/ResumeButton";
 
 // css
 import "./Banner.css";
-import Container from "../../Container";
 
 const Banner = () => {
   const [loading, setLoading] = useState(false);
@@ -101,113 +101,110 @@ const Banner = () => {
   // ----------------------------------------------------------------
   return (
     <>
-      <Container>
-        <Toaster position="top-center" reverseOrder={false} />
-        {/* for small devices  */}
-        <div className="block lg:hidden flex justify-center mt-4">
-          <img src={profile} className="rounded-full w-[200px]" alt="" />
-        </div>
-        {/* for small devices  */}
-        <div className="flex justify-center lg:justify-start">
-          {/* left */}
-          <div className="mt-12 lg:mt-44 lg:ml-24">
-            <h1 className="text-2xl lg:text-5xl lg:leading-snug text-black font-semibold font-serif">
-              Hi, There.... <br />I Am Md Sami Alam
-            </h1>
-            <p className="mt-4 text-[18px] lg:text-3xl font-semibold text-cyan-600">
-              {text}
-              <Cursor cursorBlinking="false" cursorStyle="|" />
-            </p>
+      <Toaster position="top-center" reverseOrder={false} />
+      {/* for small devices  */}
+      <div className="block lg:hidden flex justify-center mt-4">
+        <img src={profile} className="rounded-full w-[200px]" alt="" />
+      </div>
+      {/* for small devices  */}
+      <div className="flex justify-center lg:justify-start text-white">
+        {/* left */}
+        <div className="mt-12 lg:mt-44 lg:ml-24">
+          <h1 className="text-2xl lg:text-5xl lg:leading-snug font-semibold font-serif">
+            Hi, There.... <br />I Am Md Sami Alam
+          </h1>
+          <p className="mt-4 text-[18px] lg:text-3xl font-semibold text-cyan-300">
+            {text}
+            <Cursor cursorBlinking="false" cursorStyle="|" />
+          </p>
 
-            {/* social links */}
-            <div className="flex mt-2 lg:mt-8 gap-2">
-              <div className="flex items-center justify-center">
-                <div className="flex space-x-2">
-                  <a
-                    href="https://github.com/sami5671"
-                    className="text-black hover:text-cyan-600 rounded-full glow p-2"
-                  >
-                    <FaGithub className="text-[28px]" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/sami5671/"
-                    className="text-black hover:text-cyan-600  rounded-full glow p-2"
-                  >
-                    <FaLinkedin className="text-[28px]" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/samialam5671/"
-                    className="text-black hover:text-cyan-600  rounded-full glow p-2"
-                  >
-                    <FaInstagramSquare className="text-[28px]" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/samialam5559"
-                    className="text-black hover:text-cyan-600  rounded-full glow p-2"
-                  >
-                    <FaFacebook className="text-[28px]" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* social links */}
-
-            {/* button resume and contact Me */}
-            <div className="flex gap-6 mt-6 mb-24 lg:mb-44">
-              <div>
-                <ResumeButton handleDownload={handleDownload} />
-              </div>
-              <div>
-                <button
-                  onClick={() =>
-                    document.getElementById("my_modal_3").showModal()
-                  }
-                  className="bg-black px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-cyan-600 text-white font-semibold"
+          {/* social links */}
+          <div className="flex mt-2 lg:mt-8 gap-2">
+            <div className="flex items-center justify-center">
+              <div className="flex space-x-2">
+                <a
+                  href="https://github.com/sami5671"
+                  className="text-white rounded-full glow p-2"
                 >
-                  <span className="flex gap-1 items-center text-[16px]">
-                    Contact Me <MdOutlineMarkEmailRead />
-                  </span>
-                </button>
+                  <FaGithub className="text-[28px]" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/sami5671/"
+                  className="text-white  rounded-full glow p-2"
+                >
+                  <FaLinkedin className="text-[28px]" />
+                </a>
+                <a
+                  href="https://www.instagram.com/samialam5671/"
+                  className="text-white  rounded-full glow p-2"
+                >
+                  <FaInstagramSquare className="text-[28px]" />
+                </a>
+                <a
+                  href="https://www.facebook.com/samialam5559"
+                  className="text-white  rounded-full glow p-2"
+                >
+                  <FaFacebook className="text-[28px]" />
+                </a>
               </div>
-              {/*for modal  */}
-              <ContactModal
-                form={form}
-                sendEmail={sendEmail}
-                loading={loading}
-              />
             </div>
-            {/* button resume and contact Me */}
           </div>
 
-          {/* right */}
-          <div>
-            <div className="lol hidden lg:block h-[150px] w-[150px] lg:h-[400px] lg:w-[400px] lg:mr-32">
-              <div className="js">
-                <img src={js} width="50px" height="50px" alt="" />
-              </div>
-              <div className="mongodb">
-                <SiMongodb className="h-[40px] w-[40px] text-green-500" />
-              </div>
-              <div className="express">
-                <SiExpress className="h-[40px] w-[40px] text-black" />
-              </div>
-              <div className="react">
-                <RiReactjsFill className="h-[60px] w-[60px] text-cyan-300 animate-spin" />
-              </div>
-              <div className="nodejs">
-                <FaNode className="h-[60px] w-[60px] text-green-400" />
-              </div>
-              <div className="firebase">
-                <SiFirebase className="h-[40px] w-[40px] text-amber-500" />
-              </div>
-              <div className="profile">
-                <img src={profile} width="250px" height="250px" alt="" />
-              </div>
+          {/* social links */}
+
+          {/* button resume and contact Me */}
+          <div className="flex gap-6 mt-6 mb-24 lg:mb-44">
+            <div>
+              <ResumeButton handleDownload={handleDownload} />
+            </div>
+            <div>
+              <button
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+                className="bg-black px-2 py-1 rounded-md transition duration-300 ease-in-out hover:bg-cyan-600 text-white font-semibold"
+              >
+                <span className="flex gap-1 items-center text-[16px]">
+                  Contact Me <MdOutlineMarkEmailRead />
+                </span>
+              </button>
+            </div>
+            {/*for modal  */}
+            <ContactModal form={form} sendEmail={sendEmail} loading={loading} />
+          </div>
+          {/* button resume and contact Me */}
+        </div>
+
+        {/* right */}
+        <div>
+          <div className="lol hidden lg:block h-[150px] w-[150px] lg:h-[400px] lg:w-[400px] lg:mr-32">
+            <div className="js">
+              <img src={js} width="50px" height="50px" alt="" />
+            </div>
+            <div className="mongodb">
+              <SiMongodb className="h-[40px] w-[40px] text-green-500" />
+            </div>
+            <div className="express">
+              <SiExpress className="h-[40px] w-[40px] text-white" />
+            </div>
+            <div className="react">
+              <RiReactjsFill className="h-[40px] w-[40px] text-cyan-300 animate-spin" />
+            </div>
+            <div className="nodejs">
+              <FaNode className="h-[60px] w-[60px] text-green-400" />
+            </div>
+            <div className="firebase">
+              <SiFirebase className="h-[40px] w-[40px] text-amber-500" />
+            </div>
+            <div className="nextJs">
+              <TbBrandNextjs className="h-[40px] w-[40px] text-white" />
+            </div>
+            <div className="profile">
+              <img src={profile} width="250px" height="250px" alt="" />
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </>
   );
 };
