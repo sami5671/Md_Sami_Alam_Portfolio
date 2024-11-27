@@ -5,6 +5,17 @@ import Container from "../../Container";
 
 const data = [
   {
+    id: 2,
+    title: "MERN Stack Website",
+    subTitle: "Dream Car",
+    category: "Online SaaS business Platform",
+    image:
+      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436561/duww2aaorblj2y4wha5p.png",
+    liveLink: "https://dream-car-68b89.web.app/",
+    clientLink: "https://github.com/sami5671/Dream-Car-Client",
+    serverLink: "https://github.com/sami5671/Dream-Car-Server",
+  },
+  {
     id: 1,
 
     title: "MERN Stack Website",
@@ -15,17 +26,6 @@ const data = [
     liveLink: "https://planet-world-fc802.web.app/",
     clientLink: "https://github.com/sami5671/Planet-World-Client",
     serverLink: "https://github.com/sami5671/Plant-World-Server",
-  },
-  {
-    id: 2,
-    title: "MERN Stack Website",
-    subTitle: "Dream Car",
-    category: "Online SaaS business Platform",
-    image:
-      "https://res.cloudinary.com/dgz0be5p3/image/upload/v1729436561/duww2aaorblj2y4wha5p.png",
-    liveLink: "https://dream-car-68b89.web.app/",
-    clientLink: "https://github.com/sami5671/Dream-Car-Client",
-    serverLink: "https://github.com/sami5671/Dream-Car-Server",
   },
   {
     id: 3,

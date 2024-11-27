@@ -5,7 +5,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
   return (
     <>
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box bg-white">
+        <div className="modal-box bg-white ">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm  bg-red-600 btn-circle btn-ghost absolute right-2 top-2">
@@ -23,7 +23,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
               onSubmit={sendEmail}
               className="flex flex-col gap-2 lg:w-1/2"
             >
-              <div className="lg:flex gap-6">
+              <div className="lg:flex gap-6 text-black">
                 <input
                   className="py-2 px-4 border-2 border-cyan-600  rounded-md"
                   type="text"
@@ -42,7 +42,7 @@ const ContactModal = ({ sendEmail, form, loading }) => {
                 />
               </div>
               <textarea
-                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-cyan-600 rounded-md"
+                className="lg:w-[450px] mt-4 py-2 px-4 border-2 border-cyan-600 rounded-md text-black"
                 placeholder="Write something here............."
                 name="message"
                 id=""

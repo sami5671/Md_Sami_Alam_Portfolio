@@ -20,7 +20,7 @@ import { Toaster } from "react-hot-toast";
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import profile from "../../assets/images/profile2.png";
-import ResumePDF from "../../assets/images/MD_SAMI_ALAM.pdf";
+import ResumePDF from "../../assets/images/Md_Sami_Alam.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ContactModal from "../../Components/ContactModal/ContactModal";
 import ResumeButton from "../../Components/ResumeButton/ResumeButton";
