@@ -109,6 +109,31 @@ body {
   margin: auto;
   animation: nextJs 25s linear infinite;
 }
+.scratch {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: scratch 25s infinite;
+}
+
+.python {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: python 35s infinite;
+}
 
 @keyframes js {
   0% {
@@ -170,5 +195,22 @@ body {
   }
   100% {
     transform: rotate(360deg) translate(100px, 200px) rotate(-360deg);
+  }
+}
+@keyframes scratch {
+  0% {
+    transform: rotate(0deg) translate(-180px, -180px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-180px, -180px) rotate(-360deg);
+  }
+}
+
+@keyframes python {
+  0% {
+    transform: rotate(0deg) translate(120px, 220px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(120px, 220px) rotate(-360deg);
   }
 }

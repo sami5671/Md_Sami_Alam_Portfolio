@@ -1,5 +1,5 @@
 // react icons
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiPython } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
@@ -27,6 +27,10 @@ import ResumeButton from "../../Components/ResumeButton/ResumeButton";
 
 // css
 import "./Banner.css";
+
+// import static files
+import scratch from "../../assets/images/scratch.png";
+import python from "../../assets/images/python.png";
 
 const Banner = () => {
   const [loading, setLoading] = useState(false);
@@ -107,9 +111,9 @@ const Banner = () => {
         <img src={profile} className="rounded-full w-[200px]" alt="" />
       </div>
       {/* for small devices  */}
-      <div className="flex justify-center lg:justify-start text-white">
+      <div className="flex justify-center lg:justify-start text-white lg:p-0 pl-4 pr-4">
         {/* left */}
-        <div className="mt-12 lg:mt-44 lg:ml-24">
+        <div className="mt-12 lg:mt-44 lg:ml-16">
           <h1 className="text-2xl lg:text-5xl lg:leading-snug font-semibold font-serif">
             Hi, There.... <br />I Am Md Sami Alam
           </h1>
@@ -198,6 +202,12 @@ const Banner = () => {
             </div>
             <div className="nextJs">
               <TbBrandNextjs className="h-[40px] w-[40px] text-white" />
+            </div>
+            <div className="python">
+              <img src={python} className="h-[40px] w-[40px]" alt="" />
+            </div>
+            <div className="scratch">
+              <img src={scratch} className="h-[40px] w-[40px]" alt="" />
             </div>
             <div className="profile">
               <img src={profile} width="250px" height="250px" alt="" />

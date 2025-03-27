@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar font-semibold shadow-xl">
-        <div className="logo mr-18">
+        <div className="logo">
           {/* <img src={logo} className="w-[40px] h-[40px]" alt="" /> */}
         </div>
         <ul className="links">
@@ -34,9 +34,12 @@ const Navbar = () => {
               <a href="#">Blog</a>
             </li>
           </Link>
-          <li>
-            <a href="#">Contact</a>
-          </li>
+
+          <Link spy={true} smooth={true} to="contact">
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </Link>
         </ul>
         <div className="toggle_btn" onClick={toggleMenu}>
           <span>{isOpen ? <IoMdCloseCircle /> : <AiOutlineMenu />}</span>

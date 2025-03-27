@@ -3,10 +3,10 @@ import Banner from "./Home/Banner/Banner";
 import Navbar from "./Home/Navbar/Navbar";
 import { Cursor } from "react-simple-typewriter";
 import Project from "./Home/Project/Project";
-import Blog from "./Home/Blog/Blog";
 import PuffLoader from "react-spinners/PuffLoader";
 import { Helmet } from "react-helmet-async";
 import Footer from "./Home/Footer/Footer";
+import Contact from "./Home/Contact/Contact";
 
 function App() {
   // ----------------------------------------------------------------
@@ -46,12 +46,12 @@ function App() {
         </div>
       ) : (
         <>
-          {" "}
           <div className="max-w-screen-2xl m-auto">
             <Navbar></Navbar>
             <Banner></Banner>
             <Project></Project>
             {/* <Blog></Blog> */}
+            <Contact></Contact>
           </div>
           <Footer></Footer>
         </>
